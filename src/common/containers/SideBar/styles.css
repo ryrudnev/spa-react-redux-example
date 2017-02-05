@@ -1,0 +1,89 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.sidebar-inner.active {
+  display: block;
+  box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+  transform: translate(-300px, 0);
+}
+
+.sidebar-inner {
+  width: 300px;
+  position: absolute;
+  min-width: 8px;
+  top: 64px;
+  bottom: 0;
+  overflow: auto;
+  background: #fbfbfd;
+  transition: transform 0.33s ease-in;
+
+  & ul {
+    padding: 0;
+  }
+
+  & :global(.nav-tabs) {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    width: 300px;
+    background: #3d464d;
+    z-index: 2;
+    top: 64px;
+    padding: 0;
+
+    & > li {
+      float: left;
+      margin: 0;
+      margin-bottom: -1px;
+      display: inline-block;
+      border-right: none;
+      width: 33.3333%;
+
+      & > a {
+        margin-right: 0;
+        line-height: normal;
+        color: #fff;
+        display: block;
+        border: none;
+        border-radius: 0;
+        text-align: center;
+        margin-bottom: -1px;
+        padding: 12px 0;
+      }
+    }
+
+    & > :global(li.active) > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #399bff;
+        cursor: default;
+        background-color: #fff;
+        border: none;
+      }
+    }
+  }
+}
+
+.panel-header {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #37363e;
+  padding: 16px 0;
+  position: relative;
+}
+
+.panel-title {
+  background: #e4e4e4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  margin: 0 -20px;
+  padding: 4px 0 4px 20px;
+}

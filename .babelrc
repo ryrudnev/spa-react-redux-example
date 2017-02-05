@@ -1,0 +1,20 @@
+{
+  "presets": [
+    "latest",
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "system-import-transformer",
+    "transform-decorators-legacy",
+    "transform-runtime"
+  ],
+  "env": {
+    "production": {
+      "presets": ["react-optimize"],
+      "plugins": [
+        ["lodash", { "id": ["lodash", "recompose"] }]
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.app {
+  & .base {
+    overflow: hidden;
+    padding-left: 64px;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .base {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  :global(.menubar-pin) .base {
+    padding-left: 240px;
+  }
+}

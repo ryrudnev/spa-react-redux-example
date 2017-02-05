@@ -1,0 +1,39 @@
+.login-form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.login-form .top h1 {
+  color: #37363e;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-top: -14px;
+}
+
+.login-form .form-area :global(.form-group) {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.login-form .top h4 {
+  font-weight: normal;
+  color: #76757b;
+  font-size: 15px;
+}
+
+.login-form .top h1,
+.login-form .top h4 {
+  margin: 0;
+}
+
+.top {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.form-area {
+  padding: 40px;
+}

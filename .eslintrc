@@ -1,0 +1,48 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:lodash-fp/recommended"
+  ],
+  "plugins": [
+    "react",
+    "import",
+    "lodash-fp"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "global-require": 0,
+    "no-underscore-dangle": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/forbid-prop-types": [1, { "forbid": ["any"] }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["!src/**"]}],
+  },
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolver": {
+      "webpack": {
+        "config": "config/webpack.config.js"
+      }
+    }
+  },
+  "globals": {
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__PROD__": true,
+    "__DEV__": true,
+    "__DEVTOOLS__": true,
+    "__DEBUG__": true,
+    "__SSR__": true,
+    "__TEST__": true,
+    "__COVERAGE__": true,
+    "webpackIsomorphicTools": true,
+    "should": true,
+    "expect": true,
+    "assert": true
+  }
+}

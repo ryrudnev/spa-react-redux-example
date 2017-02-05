@@ -1,0 +1,9 @@
+export const INITIALIZE = 'datatable/INITIALIZE';
+export const DESTROY = 'datatable/DESTROY';
+export const SET_FETCH_OPTIONS = 'datatable/SET_FETCH_OPTIONS';
+export const FETCH = 'datatable/FETCH';
+export const CLEAR_FETCH = 'datatable/CLEAR_FETCH';
+export const FETCH_REQUEST = 'datatable/FETCH_REQUEST';
+export const FETCH_REQUEST_FAILURE = 'datatable/FETCH_REQUEST_FAILURE';
+export const FETCH_REQUEST_SUCCESS = 'datatable/FETCH_REQUEST_SUCCESS';
+export const RESET = 'datatable/RESET';

@@ -1,0 +1,71 @@
+/* Montserrat */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* Open Sans */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300);
+
+/* Bootstrap Main Css File (unedited) */
+@import 'bootstrap/dist/css/bootstrap.css';
+
+/* React bootstrap table (without toastr package) */
+@import 'react-bootstrap-table/dist/react-bootstrap-table.min.css';
+
+/* Font Awesome */
+@import 'font-awesome/css/font-awesome.css';
+
+/* Theme Style */
+@import 'kode-example/styles.css';
+
+/* Responsive Style */
+@import 'kode-example/responsive.css';
+
+/* Shortcuts Css Codes */
+@import 'kode-example/shortcuts.css';
+
+body {
+  background: #f5f5f5;
+}
+
+/* Custom shortcuts */
+
+.no-linebreak {
+  white-space: nowrap;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+.text-primary {
+  color: #399bff;
+}
+
+.text-lg {
+  font-size: 125%;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.hidden-folded {
+  display: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group .form-control.form-control-with-icon {
+  padding-left: 38px;
+  height: 40px;
+}
+
+.form-group .form-control-with-icon ~ .fa {
+  position: absolute;
+  top: 11px;
+  left: 13px;
+  font-size: 16px;
+  color: #c3c3c3;
+}

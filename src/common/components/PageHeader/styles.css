@@ -1,0 +1,18 @@
+.page-header {
+  background: #fff;
+  margin: -40px -30px 20px -24px;
+  padding: 20px;
+  border-bottom: none;
+  position: relative;
+
+  & .title {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
+    color: #37363e;
+    padding-bottom: 6px;
+  }
+}

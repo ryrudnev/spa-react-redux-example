@@ -1,0 +1,327 @@
+.gui-controls {
+  font-size: 14px;
+  padding: 0;
+  margin-bottom: 30px;
+  margin-top: 0;
+
+  & > li {
+    position: relative;
+    margin-bottom: 12px;
+  }
+
+  & > li > a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 14px;
+    line-height: normal;
+    border-radius: 0;
+    padding-left: 0;
+    min-height: 40px;
+    min-width: 64px;
+    z-index: 1;
+  }
+
+  & > li > a .title {
+    margin-left: 57px;
+  }
+
+  & li {
+    list-style: none;
+  }
+
+  & > li ul > li {
+    position: relative;
+
+    &:first-child::before {
+      top: 0;
+    }
+
+    &:first-child:last-child::before {
+      bottom: 15px;
+    }
+
+    &:last-child:not(:first-child)::before {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      left: 30px;
+      top: 15px;
+      bottom: -15px;
+      position: absolute;
+      display: block;
+      width: 1px;
+      border-left: 1px dashed rgba(12, 12, 12, 0.3);
+      z-index: 1;
+    }
+
+    & > a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      padding: 7px 17px;
+      font-size: 14px;
+      line-height: normal;
+      border-radius: 0;
+      padding-left: 57px;
+
+      &::before {
+        content: '';
+        left: 30px;
+        top: 15px;
+        position: absolute;
+        display: block;
+        width: 21px;
+        border-bottom: 1px dashed rgba(12, 12, 12, 0.3);
+        z-index: 1;
+      }
+    }
+  }
+
+  & li ul {
+    padding: 0;
+    display: none;
+  }
+
+  & .icon {
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    color: #535858;
+    font-size: 18px;
+    overflow: hidden;
+    border-radius: 999px;
+    transition: all 0.15s linear;
+
+    & > i {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      line-height: 40px;
+      width: 1em;
+    }
+  }
+
+  & .title {
+    position: relative;
+    left: -10px;
+    display: block;
+    padding-left: 6px;
+    color: rgba(12, 12, 12, 0.85);
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    text-shadow: none;
+    transition: all 0.5s cubic-bezier(0.15, 0.99, 0.18, 1.01);
+  }
+
+  & .folder > a {
+    cursor: pointer;
+  }
+
+  & .folder > a::after {
+    content: '+';
+    position: absolute;
+    top: 7px;
+    display: inline-block;
+    margin-left: -12px;
+    color: rgba(12, 12, 12, 0.5);
+    font-size: 14px;
+    font-weight: inherit;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: all 0.15s linear;
+  }
+
+  & .folder.expanded > a::after {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -2px;
+    margin-left: -12px;
+    transform: rotate(-45deg);
+    transition: all 0.1s linear;
+  }
+
+  & > .folder.expanded > a::after {
+    color: rgba(12, 12, 12, 0.4);
+    margin-left: 0;
+    transform: rotate(-45deg);
+  }
+
+  & > .folder > a::after {
+    top: 12px;
+    margin-left: 2px;
+  }
+
+  &.inverse {
+    & .title {
+      color: rgba(255, 255, 255, 0.65);
+      text-shadow: 0 1px 2px #000;
+    }
+
+    & .icon {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    & .icon:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    & .folder > a::after {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    & > li ul > li::before {
+      border-left: 1px dashed rgba(255, 255, 255, 0.3);
+    }
+
+    & > li ul > li > a::before {
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    }
+
+    & > .folder.expanded > a::after {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    & li.active > a .title {
+      color: #fff;
+    }
+
+    & li > a:hover .title {
+      color: #fff;
+    }
+
+    & li.folder > a .title {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    & > li ul > li > a:hover,
+    & > li ul > li > a:focus {
+      background-color: #313942;
+    }
+  }
+
+  & > li ul > li > a:hover,
+  & > li ul > li > a:focus {
+    background-color: rgba(12, 12, 12, 0.07);
+  }
+
+  & li.active > a .title {
+    color: #399bff;
+    font-weight: 500;
+  }
+
+  & li > a:hover .title {
+    color: #0c0c0c;
+  }
+
+  & a.expanded .icon,
+  & li.active .icon,
+  & li.active .icon:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #399bff;
+  }
+
+  & > li > ul > li > ul a {
+    padding-left: 78px;
+  }
+
+  & > li > ul > li > ul li::before {
+    left: 51px;
+  }
+
+  & > li > ul > li > ul a::before {
+    left: 51px;
+  }
+}
+
+:global(.menubar-visible) .gui-controls li .title {
+  left: 0;
+  opacity: 1;
+}
+
+:global(.menubar-visible) .gui-controls.inverse > li:not(.folder) > a:hover {
+  background-color: #313942;
+}
+
+:global(.menubar-visible) .gui-controls:not(.inverse) > li:not(.folder) > a:hover {
+  background-color: rgba(12, 12, 12, 0.07);
+}
+
+:global(.menubar-visible) .gui-controls .folder.expanded > ul {
+  display: block;
+  -webkit-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+}
+
+:global(.menubar-visible) .gui-controls .folder > a::after {
+  opacity: 1;
+}
+
+:global(.menubar-visible) .gui-controls.inverse .folder:hover:not(.active) .icon {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+:global(.menubar-visible) .gui-controls .folder:hover:not(.active) .icon {
+  background-color: rgba(12, 12, 12, 0.07);
+  color: #313534;
+}
+
+:global(.menubar-visible) .gui-controls.inverse > li.active:not(.folder) > a {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1200px) {
+  :global(.menubar-pin) .gui-controls li .title {
+    left: 0;
+    opacity: 1;
+  }
+
+  :global(.menubar-pin) .gui-controls.inverse > li:not(.folder) .icon:hover {
+    background: inherit;
+  }
+
+  :global(.menubar-pin) .gui-controls .folder.expanded > ul {
+    display: block;
+    -webkit-animation: fadeIn 0.7s;
+    animation: fadeIn 0.7s;
+  }
+
+  :global(.menubar-pin) .gui-controls.inverse > li.active:not(.folder) > a {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  :global(.menubar-pin) .folder > a::after {
+    opacity: 1;
+  }
+
+  :global(.menubar-pin) .gui-controls > li.active:not(.folder) > a {
+    background-color: #fff;
+    transition: background 0.3s linear;
+  }
+
+  :global(.menubar-pin) .gui-controls > li:not(.folder) > a:hover {
+    background-color: rgba(12, 12, 12, 0.07);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
